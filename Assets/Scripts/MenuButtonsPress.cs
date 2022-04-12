@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtonsPress : MonoBehaviour
 {
-    public Button PlayGameButton, ExitGameButton;
+    public Button onePlayerButton, twoPlayerButton, exitGameButton;
     void Start() 
     {
-        PlayGameButton.onClick.AddListener(delegate {TaskWithParameters("PlayGame"); });
-        ExitGameButton.onClick.AddListener(delegate {TaskWithParameters("ExitGame"); });
+        //FINISH THIS:
+        
+        // PlayGameButton.onClick.AddListener(delegate {TaskWithParameters("PlayGame"); });
+        // ExitGameButton.onClick.AddListener(delegate {TaskWithParameters("ExitGame"); });
     }
 
     void TaskWithParameters(string button)
