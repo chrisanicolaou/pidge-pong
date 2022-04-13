@@ -10,6 +10,7 @@ public class EndScreenText : MonoBehaviour
     public AudioSource snuglyWinSFX;
 
     public AudioSource music;
+    private bool playMusic = true;
     void Start()
     {
         winnerText = GetComponent<TextMeshProUGUI>();
@@ -29,8 +30,9 @@ public class EndScreenText : MonoBehaviour
 
     void Update()
     {
-        if (!andyWinSFX.isPlaying && !snuglyWinSFX.isPlaying) {
+        if (!andyWinSFX.isPlaying && !snuglyWinSFX.isPlaying && playMusic) {
             music.Play();
+            playMusic = false;
         }
     }
 }
