@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 34
   m_Sprite: {fileID: 21300000, guid: 807bfd1e5a54f544eb2dc50bf66e37f4, type: 3}
-  m_Color: {r: 0.8584906, g: 0.6881664, b: 0.66816485, a: 1}
+  m_Color: {r: 1, g: 0.05809614, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!50 &4753171753441007825
 Rigidbody2D:

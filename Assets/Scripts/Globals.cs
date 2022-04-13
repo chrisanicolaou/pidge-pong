@@ -14,10 +14,10 @@ public static class Globals
     public static void CheckWinner()
     {
         if (playerOneScore == 7) {
-            winner = "Left Pong Wins!";
+            winner = "Andy";
         }
         if (playerTwoScore == 7) {
-            winner = "Right Pong Wins!";
+            winner = "Snugly";
         }
     }
 
