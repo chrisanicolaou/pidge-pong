@@ -5,17 +5,18 @@ using UnityEngine;
 public class PauseForHorns : MonoBehaviour
 {
     public AudioSource horns;
+    public AudioSource music;
     void Start()
     {
-        horns.Play();
         Time.timeScale = 0f;
     }
     
-    void Update() //Put 'resume' functionality in Update - although it is worse for performance, the game is small. Code that is easier to refactor > performance
+    void Update()
     {
         if (!horns.isPlaying) {
             Time.timeScale = 1f;
-            Destroy(this);
+            music.Play();
+            Destroy(this.gameObject);
         }
     }
 }
