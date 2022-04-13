@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4753171753441007825}
   - component: {fileID: 4753171753441007824}
   - component: {fileID: 4753171753441007830}
+  - component: {fileID: 1891578817895018272}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 34
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 807bfd1e5a54f544eb2dc50bf66e37f4, type: 3}
   m_Color: {r: 0.8584906, g: 0.6881664, b: 0.66816485, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,15 +114,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4753171753441007821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 6ae99b62452a7ac41ba3ad505fa3517a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.1402347, y: 0.02201432}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.62218165
 --- !u!114 &4753171753441007830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +140,45 @@ MonoBehaviour:
   playerTwoScoreText: {fileID: 6840281935767749506, guid: 11cdbd6746bf53542892d20c2718c83a, type: 3}
   newBall: {fileID: 4753171753441007821}
   enemyPaddle: {fileID: 8378307222639450336, guid: 421a1a275c15eb645a82d3714af4c690, type: 3}
+--- !u!60 &1891578817895018272
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753171753441007821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 2.8194444, y: 0.9305556, z: 2.527778, w: 0.8194445}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.6666665, y: 3.75}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.725962, y: 0.683628}
+      - {x: 0.4993328, y: 0.91092485}
+      - {x: 0.25373974, y: 1.0504811}
+      - {x: 0, y: 1.0125542}
+      - {x: -0.207666, y: 0.897036}
+      - {x: -0.33199865, y: 0.7916667}
+      - {x: -0.43362808, y: 0.5467412}
+      - {x: -0.4718001, y: 0.30828923}
+      - {x: -0.5081471, y: 0.19885162}
+      - {x: -0.50814706, y: -0.041666668}
+      - {x: -0.3736653, y: -0.65211046}
+      - {x: -0.19310975, y: -0.8604438}
+      - {x: -0.012554258, y: -0.9437771}
+      - {x: 0.29166666, y: -0.91533196}
+      - {x: 0.52270335, y: -0.69751686}
+      - {x: 0.7574797, y: -0.08707321}
+      - {x: 0.7574797, y: 0.33159548}
