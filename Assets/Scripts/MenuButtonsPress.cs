@@ -8,22 +8,29 @@ public class MenuButtonsPress : MonoBehaviour
 {
     public Button onePlayerButton, twoPlayerButton, exitGameButton;
     void Start() 
-    {
-        //FINISH THIS:
-        
-        // PlayGameButton.onClick.AddListener(delegate {TaskWithParameters("PlayGame"); });
-        // ExitGameButton.onClick.AddListener(delegate {TaskWithParameters("ExitGame"); });
+    {   
+        onePlayerButton.onClick.AddListener(delegate {TaskWithParameters("onePlayer"); });
+        twoPlayerButton.onClick.AddListener(delegate {TaskWithParameters("twoPlayer"); });
+        exitGameButton.onClick.AddListener(delegate {TaskWithParameters("exitGame"); });
     }
 
     void TaskWithParameters(string button)
     {
         switch(button)
         {
-            case "PlayGame":
+            case "onePlayer":
+                Globals.isMultiplayer = false;
+                Globals.ResetGlobals();
                 SceneManager.LoadScene("Main_Game");
                 break;
 
-            case "ExitGame":
+            case "twoPlayer":
+                Globals.isMultiplayer = true;
+                Globals.ResetGlobals();
+                SceneManager.LoadScene("Main_Game");
+                break;
+            
+            case "exitGame":
                 Application.Quit();
                 break;
         }

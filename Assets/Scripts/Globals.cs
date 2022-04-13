@@ -20,4 +20,11 @@ public static class Globals
             winner = "Right Pong Wins!";
         }
     }
+
+    public static void ResetGlobals()
+    {
+        playerOneScore = 0;
+        playerTwoScore = 0;
+        winner = "";
+    }
 }

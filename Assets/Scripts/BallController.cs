@@ -15,24 +15,21 @@ public class BallController : MonoBehaviour
     public GameObject newBall;
 
     private Vector2 direction;
-
+    public GameObject enemyPaddle;
     private int randomDirection;
+    private bool setupComplete = false;
+    private EnemyPongController focusEnemyPaddle;
     void Start()
     {
-        randomDirection = Random.Range(0, 2);
-        _rb = GetComponent<Rigidbody2D>();
-        if (randomDirection == 0) {
-            direction = Vector2.right;
-        }
-        if (randomDirection == 1) {
-            direction = Vector2.left;
-        }
+        StartCoroutine("SetupBall");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (setupComplete) {
         _rb.velocity = speed * direction;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -75,7 +72,29 @@ public class BallController : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         Instantiate(newBall, Vector3.zero, Quaternion.identity);
+        if (!Globals.isMultiplayer) {
+        focusEnemyPaddle.ball = newBall.GetComponent<Transform>();
+        }
         yield return new WaitForSeconds(0.1f);
         Destroy(this.gameObject);
+    }
+
+    IEnumerator SetupBall()
+    {
+        yield return new WaitForSeconds(0.3f);
+        randomDirection = Random.Range(0, 2);
+        _rb = GetComponent<Rigidbody2D>();
+        if (!Globals.isMultiplayer) {
+            Debug.Log("Doing things");
+            focusEnemyPaddle = enemyPaddle.GetComponent<EnemyPongController>();
+            focusEnemyPaddle.ball = this.transform;
+        }
+        if (randomDirection == 0) {
+            direction = Vector2.right;
+        }
+        if (randomDirection == 1) {
+            direction = Vector2.left;
+        }
+        setupComplete = true;
     }
 }
