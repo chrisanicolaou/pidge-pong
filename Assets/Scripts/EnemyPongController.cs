@@ -28,11 +28,13 @@ public class EnemyPongController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (ball.position.y - 1> this.transform.position.y) {
-            _rb.velocity = Vector2.up * speed;
-        }
-        if (ball.position.y + 1< this.transform.position.y) {
-            _rb.velocity = Vector2.down * speed;
+        if (ball != null) {
+            if (ball.position.y - 1> this.transform.position.y) {
+                _rb.velocity = Vector2.up * speed;
+            }
+            if (ball.position.y + 1< this.transform.position.y) {
+                _rb.velocity = Vector2.down * speed;
+            }
         }
     }
 }
